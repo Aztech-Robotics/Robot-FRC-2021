@@ -45,7 +45,7 @@ public void reset (){
 
 
     public void zone2(double speed){
-      if(m_angle.getSelectedSensorPosition() > -80836){
+      if(m_angle.getSelectedSensorPosition() > -81444){
         m_angle.set(ControlMode.PercentOutput, speed);
       }
       else{
@@ -56,7 +56,7 @@ public void reset (){
 
 
     public void zone3(double speed){
-        if(m_angle.getSelectedSensorPosition() > -105990){
+        if(m_angle.getSelectedSensorPosition() > -47300){
           m_angle.set(ControlMode.PercentOutput, speed);
         }
         else{
@@ -67,7 +67,7 @@ public void reset (){
 
 
     public void zone4(double speed){
-          if(m_angle.getSelectedSensorPosition() > -45555){
+          if(m_angle.getSelectedSensorPosition() > -105990){
             m_angle.set(ControlMode.PercentOutput, speed);
           }
           else{

@@ -5,8 +5,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.drive.Drive;
 import frc.robot.commands.intake.MCells;
 import frc.robot.commands.intake.MIntake;
@@ -54,10 +53,10 @@ public class RobotContainer {
   /** Control 1 */
   public XboxController control1 = new XboxController(1);
   //Buttons
-  public JoystickButton abutton = new JoystickButton(control1, 1);
-  public JoystickButton bbutton = new JoystickButton(control1, 2);
-  public JoystickButton cbutton = new JoystickButton(control1, 3);
-  public JoystickButton dbutton = new JoystickButton(control1, 4);
+  public JoystickButton aButton = new JoystickButton(control1,1);
+  public JoystickButton bButton = new JoystickButton(control1, 2);
+  public JoystickButton cButton = new JoystickButton(control1, 3);
+  public JoystickButton dButton = new JoystickButton(control1, 4);
 
 
   /** Axis methods */
@@ -76,13 +75,11 @@ public class RobotContainer {
     shooterS.setDefaultCommand(c_shoot);
     turretM.setDefaultCommand(c_turret);
     angleS.setDefaultCommand(c_angle);
-    intakeS.setDefaultCommand(c_intake);
-    
-    
-    abutton.whenPressed(new Zona1());
-    bbutton.whenPressed(c_zone2);
-    cbutton.whenPressed(c_zone3);
-    dbutton.whenPressed(c_zone4);
+   intakeS.setDefaultCommand(c_intake);
+   aButton.whenPressed(c_zone1); 
+   bButton.whenPressed(c_zone2); 
+   cButton.whenPressed(c_zone3); 
+   dButton.whenPressed(c_zone4); 
   }
 
   private void configureButtonBindings() {}
