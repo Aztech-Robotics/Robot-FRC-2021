@@ -29,6 +29,10 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
     double angulo = RC.angleS.ImAngle();
     SmartDashboard.putNumber("Angulo", angulo);
+    double left_encoder = RC.driveT.encleft();
+    SmartDashboard.putNumber("Encoder izq.", left_encoder);
+    double right_encoder = RC.driveT.encright();
+    SmartDashboard.putNumber("Encoder Der.", right_encoder);
   }
 
   @Override
